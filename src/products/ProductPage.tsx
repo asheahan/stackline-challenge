@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Grid } from "../components";
 import { useAppSelector } from "../hooks";
 import ProductDetails from "./ProductDetails";
+import ProductSalesTable from "./ProductSalesTable/ProductSalesTable";
 import { selectProductById } from "./productsSlice";
 
 function ProductPage() {
@@ -16,7 +17,9 @@ function ProductPage() {
       <Grid item xs={4}>
         <ProductDetails />
       </Grid>
-      <Grid item xs={8}></Grid>
+      <Grid item xs={8}>
+        <ProductSalesTable />
+      </Grid>
     </Grid>
   );
 }
