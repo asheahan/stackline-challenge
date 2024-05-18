@@ -44,3 +44,6 @@ export default productsSlice.reducer;
 
 export const { selectAll: selectProducts, selectById: selectProductById } =
   productsAdapter.getSelectors((state: RootState) => state.products);
+
+export const selectProductsIsLoading = (state: RootState) =>
+  state.products.status === "loading" || state.products.status === "idle";
