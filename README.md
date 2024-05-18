@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+# Stackline Product Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project creates a dummy product app that shows information for a product using a mocked network call. This information includes sales data displayed in both graph and table formats.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+### Setup for Local Development
 
-### `npm start`
+```bash
+# Install dependencies
+npm install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Start the local server
+npm start
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Running Tests
 
-### `npm test`
+```bash
+npm test
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Assumptions
 
-### `npm run build`
+1. The product page was designed to work as part of a wider scoped app. Currently, the app loads to a single product page at the path "/products/B007TIE0GQ" but would be able to handle any product that can be loaded from the API using the parameter in the path. A separate product list page would then link to these product pages. The app also handles non-existent products.
+2. The graph data currently only shows "Retail Sales" data per the mock, but additional metrics could be switched out with minimal updates. The mock shows 2 different lines, but it wasn't clear what the other line would indicate (either past Retail Sales data per the title or perhaps a different metric).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Future Considerations
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In the interest of time, a few improvements were skipped that would otherwise be implemented. These include:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Error handling
+  1. Handling errors from the API call and showing the correct message to the user on the product page.
+  2. An error boundary should be added to handle thrown errors within React. The error handler should handle messaging to the user as well as emitting the error metrics to monitoring systems for debugging.
+2. Responsiveness
+  1. The app should be updated to ensure it works well on a broad range of screen sizes including mobile screens.
+3. Styling
+  1. A dedicated theme configuration should be added to ensure proper UI styles are applied and consistent throughout the app.
+  2. Font styles should be updated to reflect the UX design and brand.
+4. Testing
+  1. Unit tests should be added to ensure the data is fetched on app load as well as the proper finalized renderings are expected.
+  2. E2E tests for full integration testing.
