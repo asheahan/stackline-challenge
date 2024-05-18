@@ -20,6 +20,14 @@ npm start
 npm test
 ```
 
+### Deployment
+
+The app is currently deployed to Github Pages and can be viewed at [https://asheahan.github.io/stackline-challenge](https://asheahan.github.io/stackline-challenge)
+
+```bash
+npm run deploy
+```
+
 ## Assumptions
 
 1. The product page was designed to work as part of a wider scoped app. Currently, the app loads to a single product page at the path "/products/B007TIE0GQ" but would be able to handle any product that can be loaded from the API using the parameter in the path. A separate product list page would then link to these product pages. The app also handles non-existent products.
