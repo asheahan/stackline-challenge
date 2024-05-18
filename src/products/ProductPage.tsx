@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Grid } from "../components";
 import { useAppSelector } from "../hooks";
 import ProductDetails from "./ProductDetails";
+import ProductSalesGraph from "./ProductSalesGraph/ProductSalesGraph";
 import ProductSalesTable from "./ProductSalesTable/ProductSalesTable";
 import { selectProductById } from "./productsSlice";
 
@@ -18,6 +19,7 @@ function ProductPage() {
         <ProductDetails />
       </Grid>
       <Grid item xs={8}>
+        <ProductSalesGraph />
         <ProductSalesTable />
       </Grid>
     </Grid>
