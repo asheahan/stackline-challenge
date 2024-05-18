@@ -29,9 +29,12 @@ function ProductDetails() {
         <Typography variant="body2">{product?.subtitle}</Typography>
       </Box>
       <Divider />
-      <Box p={2}>
-        {product?.tags.map((tag) => <Chip key={tag} label={tag} />)}
+      <Box p={2} lineHeight={"2rem"}>
+        {product?.tags.map((tag) => (
+          <Chip key={tag} label={tag} sx={{ marginRight: "0.25rem" }} />
+        ))}
       </Box>
+      <Divider />
     </Card>
   );
 }

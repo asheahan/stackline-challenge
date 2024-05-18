@@ -29,7 +29,7 @@ function ProductSalesGraph() {
             type="monotone"
             dataKey="retailSales"
             dot={false}
-            strokeWidth={2}
+            strokeWidth={3}
             stroke="#5F99ED"
           />
         </LineChart>

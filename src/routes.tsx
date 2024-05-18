@@ -19,7 +19,12 @@ function Layout() {
   return (
     <>
       <Header />
-      <Box component="main" p={3} height="100%">
+      <Box
+        component="main"
+        p={3}
+        height="100%"
+        sx={{ backgroundColor: "#F5F7F9" }}
+      >
         <Outlet />
       </Box>
     </>
