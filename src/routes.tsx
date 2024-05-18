@@ -1,5 +1,6 @@
 import { Navigate, Outlet, Route, Routes } from "react-router-dom";
 
+import Header from "./Header";
 import ProductPage from "./products/ProductPage";
 
 function AllRoutes() {
@@ -14,7 +15,12 @@ function AllRoutes() {
 }
 
 function Layout() {
-  return <Outlet />;
+  return (
+    <>
+      <Header />
+      <Outlet />
+    </>
+  );
 }
 
 export default AllRoutes;
