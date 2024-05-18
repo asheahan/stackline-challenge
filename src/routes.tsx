@@ -1,5 +1,6 @@
 import { Navigate, Outlet, Route, Routes } from "react-router-dom";
 
+import { Box } from "./components";
 import Header from "./Header";
 import ProductPage from "./products/ProductPage";
 
@@ -18,7 +19,9 @@ function Layout() {
   return (
     <>
       <Header />
-      <Outlet />
+      <Box component="main" p={3} height="100%">
+        <Outlet />
+      </Box>
     </>
   );
 }

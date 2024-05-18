@@ -6,8 +6,11 @@ import {
 
 import { RootState } from "../store";
 import { fetch } from "../api/client";
+import { ProductDetails } from "./types";
 
-const productsAdapter = createEntityAdapter();
+const productsAdapter = createEntityAdapter({
+  selectId: (product: ProductDetails) => product.id,
+});
 
 const initialState = productsAdapter.getInitialState({
   status: "idle",
