@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/stackline-challenge/static/css/main.e6c13ad2.css",
+    "main.js": "/stackline-challenge/static/js/main.b24ae6f4.js",
+    "static/js/453.24d3e9fb.chunk.js": "/stackline-challenge/static/js/453.24d3e9fb.chunk.js",
+    "static/media/stackline_logo.svg": "/stackline-challenge/static/media/stackline_logo.5935081bd899ecfe02395699e768f84e.svg",
+    "index.html": "/stackline-challenge/index.html",
+    "main.e6c13ad2.css.map": "/stackline-challenge/static/css/main.e6c13ad2.css.map",
+    "main.b24ae6f4.js.map": "/stackline-challenge/static/js/main.b24ae6f4.js.map",
+    "453.24d3e9fb.chunk.js.map": "/stackline-challenge/static/js/453.24d3e9fb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.b24ae6f4.js"
+  ]
+}
